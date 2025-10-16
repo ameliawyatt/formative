@@ -1,0 +1,8 @@
+name: r-formativeEnv
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - r-base
+  - r-tidyverse
+prefix: /home/xb25901/miniconda3/envs/r-formativeEnv
