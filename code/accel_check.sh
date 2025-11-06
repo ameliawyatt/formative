@@ -9,14 +9,19 @@ txtCount=`ls ${DATADIR}/original/accel | wc -l`
 echo "Number of accelerometer files: $txtCount" 
 # display the first 10 file names
 # naming convention: accel-XXXXX.txt
+echo "First 10 file names:"
 ls ${DATADIR}/original/accel | head
 #check first file
+echo "First file check:"
 accelSample=`ls ${DATADIR}/original/accel | head -n1`
+echo "First 10 lines of first file:"
 head ${DATADIR}/original/accel/$accelSample
+echo "Number of lines in first file"
 wc -l ${DATADIR}/original/accel/$accelSample
 
 # check all files have the same first line
 # all 7455 files have the same header line
+echo "Print only the unique header rows of all files (expect one):"
 for txt in ${DATADIR}/original/accel/*.txt; do tail -n +2 $txt | head -n 1; done | uniq -c
 
 # check all rows have the expected amount of columns
@@ -31,6 +36,10 @@ cat ${DATADIR}/original/accel/accel-*.txt | grep -v '<' | awk -F'\t' '(NF!=8){pr
 # see which files the NA lines exist in - will need to remove these
 echo "Files containing NA lines:"
 grep -H -P "NA\tNA\tNA" ${DATADIR}/original/accel/accel-*.txt | sort -u
+
+### NOTE
+# Some lines take a long time but they all eventually run
+
 
 ### TODO
 #Add check to check first line number matches file name so it can be removed
