@@ -5,4 +5,6 @@ channels:
 dependencies:
   - r-base
   - r-tidyverse
+  - r-haven
+  - r-janitor
 prefix: /home/xb25901/miniconda3/envs/r-formativeEnv
