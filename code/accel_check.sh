@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ### Data exploration
-# code written to run from the data directory
-DATADIR='../data'
+# code written to run from the directory
+DATADIR='data'
 ## accel exploration
 # number of txt files
 txtCount=`ls ${DATADIR}/original/accel | wc -l`

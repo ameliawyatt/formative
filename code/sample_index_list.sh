@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# code written to run from the data directory
-DATADIR='../data'
+# code written to run from the summative directory
+DATADIR='data'
 
 #cut -f2,12 -d',' BMX_D.csv | head
 #cut -f2,12 -d',' BMX_D.csv | grep "NA" -v | head
