@@ -1,0 +1,35 @@
+Number of accelerometer files: 7455
+First 10 file names:
+accel-31128.txt
+accel-31129.txt
+accel-31131.txt
+accel-31132.txt
+accel-31133.txt
+accel-31134.txt
+accel-31137.txt
+accel-31139.txt
+accel-31140.txt
+accel-31141.txt
+First file check:
+First 10 lines of first file:
+<ACTIGRAPH ID=31128>
+"PAXSTAT"	"PAXCAL"	"PAXDAY"	"PAXN"	"PAXHOUR"	"PAXMINUT"	"PAXINTEN"	"PAXSTEP"
+1	1	1	1	0	0	166	4
+1	1	1	2	0	1	27	0
+1	1	1	3	0	2	0	0
+1	1	1	4	0	3	276	4
+1	1	1	5	0	4	0	0
+1	1	1	6	0	5	0	0
+1	1	1	7	0	6	0	0
+1	1	1	8	0	7	0	0
+Number of lines in first file
+10082 data/original/accel/accel-31128.txt
+Print only the unique header rows of all files (expect one):
+   7455 "PAXSTAT"	"PAXCAL"	"PAXDAY"	"PAXN"	"PAXHOUR"	"PAXMINUT"	"PAXINTEN"	"PAXSTEP"
+Number of columns found in the accelerometer files, different from 8:
+3
+Lines that don't have 8 columns:
+NA	NA	NA
+Files containing NA lines:
+data/original/accel/accel-31268.txt:NA	NA	NA
+data/original/accel/accel-34974.txt:NA	NA	NA

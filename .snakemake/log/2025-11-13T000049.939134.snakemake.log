@@ -1,0 +1,3 @@
+SyntaxError in file "/home/xb25901/AHDS/Week_3/formative/Snakefile", line 26:
+No rule keywords allowed after run/shell/script/notebook/wrapper/template_engine/cwl in rule sample_index_list.:
+None

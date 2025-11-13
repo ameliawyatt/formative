@@ -1,10 +1,13 @@
 name: r-formativeEnv
 channels:
   - conda-forge
+  - bioconda
   - defaults
 dependencies:
   - r-base
   - r-tidyverse
   - r-haven
   - r-janitor
+  - snakemake
+  - python
 prefix: /home/xb25901/miniconda3/envs/r-formativeEnv

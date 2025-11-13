@@ -1,0 +1,37 @@
+Assuming unrestricted shared filesystem usage.
+host: LAPTOP-LF8R5BUU
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+all              1
+bmx_check        1
+total            2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Nov 12 23:26:09 2025]
+localrule bmx_check:
+    input: data/original/BMX_D.csv
+    output: logs/bmx_check.log
+    jobid: 1
+    reason: Missing output files: logs/bmx_check.log
+    resources: tmpdir=/tmp
+[Wed Nov 12 23:26:09 2025]
+Finished jobid: 1 (Rule: bmx_check)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Nov 12 23:26:09 2025]
+localrule all:
+    input: logs/bmx_check.log
+    jobid: 0
+    reason: Input files updated by another job: logs/bmx_check.log
+    resources: tmpdir=/tmp
+[Wed Nov 12 23:26:09 2025]
+Finished jobid: 0 (Rule: all)
+2 of 2 steps (100%) done
+Complete log(s): /home/xb25901/AHDS/Week_3/formative/.snakemake/log/2025-11-12T232609.406890.snakemake.log

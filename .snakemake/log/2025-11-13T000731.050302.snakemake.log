@@ -1,0 +1,50 @@
+Assuming unrestricted shared filesystem usage.
+host: LAPTOP-LF8R5BUU
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+all                   1
+demo_data_prep        1
+write_sample          1
+total                 3
+
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Nov 13 00:07:31 2025]
+localrule write_sample:
+    input: data/original/BMX_D.csv, data/derived/indexList_in.txt
+    output: data/derived/sample.csv, logs/writeSample.log
+    jobid: 5
+    reason: Missing output files: logs/writeSample.log; Updated input files: data/original/BMX_D.csv, data/derived/indexList_in.txt
+    resources: tmpdir=/tmp
+[Thu Nov 13 00:07:31 2025]
+Finished jobid: 5 (Rule: write_sample)
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Nov 13 00:07:31 2025]
+localrule demo_data_prep:
+    input: data/original/DEMO_D.XPT, data/original/BMX_D.csv, data/derived/sample.csv
+    output: data/derived/body_measurements.csv, logs/demo_data_prep.log
+    jobid: 6
+    reason: Missing output files: logs/demo_data_prep.log; Input files updated by another job: data/derived/sample.csv
+    resources: tmpdir=/tmp
+[Thu Nov 13 00:07:34 2025]
+Finished jobid: 6 (Rule: demo_data_prep)
+2 of 3 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Nov 13 00:07:34 2025]
+localrule all:
+    input: logs/bmx_check.log, logs/accel_check.log, logs/accel_fix.log, logs/sample_index_list.log, data/derived/accelIndexList.txt, data/derived/indexList_in.txt, logs/writeSample.log, logs/demo_data_prep.log
+    jobid: 0
+    reason: Input files updated by another job: logs/demo_data_prep.log, logs/writeSample.log
+    resources: tmpdir=/tmp
+[Thu Nov 13 00:07:34 2025]
+Finished jobid: 0 (Rule: all)
+3 of 3 steps (100%) done
+Complete log(s): /home/xb25901/AHDS/Week_3/formative/.snakemake/log/2025-11-13T000731.050302.snakemake.log

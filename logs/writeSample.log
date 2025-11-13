@@ -1,0 +1,56 @@
+  Index inSample
+1 31128        1
+2 31129        1
+3 31131        1
+4 31132        1
+5 31133        1
+6 31134        1
+   SEQN X BMDSTATS BMXWT BMIWT BMXRECUM BMIRECUM BMXHEAD BMIHEAD BMXHT BMIHT
+1 31127 1        1  10.2    NA     73.6       NA      NA      NA    NA    NA
+2 31128 2        1  40.1    NA       NA       NA      NA      NA 151.6    NA
+3 31129 3        1  74.6    NA       NA       NA      NA      NA 167.7    NA
+4 31130 4        4    NA    NA       NA       NA      NA      NA    NA    NA
+5 31131 5        3  75.2    NA       NA       NA      NA      NA 156.0    NA
+6 31132 6        1  69.5    NA       NA       NA      NA      NA 167.6    NA
+  BMXBMI BMXLEG BMILEG BMXCALF BMICALF BMXARML BMIARML BMXARMC BMIARMC BMXWAIST
+1     NA     NA     NA      NA      NA    16.0      NA    15.5      NA       NA
+2  17.45   37.6     NA    29.3      NA    34.3      NA    21.7      NA     62.8
+3  26.53   42.7     NA    40.6      NA    36.5      NA    32.6      NA     97.8
+4     NA     NA     NA      NA      NA      NA      NA      NA      NA       NA
+5  30.90   38.0     NA    36.6      NA    35.0      NA    35.8      NA     96.0
+6  24.74   40.4     NA    35.6      NA    37.5      NA    31.2      NA     96.5
+  BMIWAIST BMXTHICR BMITHICR BMXTRI BMITRI BMXSUB BMISUB inSample
+1       NA       NA       NA   12.8     NA   10.0     NA       NA
+2       NA     39.5       NA   10.4     NA    8.4     NA        1
+3       NA     55.9       NA   18.8     NA   17.6     NA        1
+4       NA       NA       NA     NA     NA     NA     NA       NA
+5       NA     53.7       NA     NA      2     NA      1        1
+6       NA     48.0       NA   10.4     NA   22.2     NA        1
+   SEQN X BMDSTATS BMXWT BMIWT BMXRECUM BMIRECUM BMXHEAD BMIHEAD BMXHT BMIHT
+1 31127 1        1  10.2    NA     73.6       NA      NA      NA    NA    NA
+2 31128 2        1  40.1    NA       NA       NA      NA      NA 151.6    NA
+3 31129 3        1  74.6    NA       NA       NA      NA      NA 167.7    NA
+4 31130 4        4    NA    NA       NA       NA      NA      NA    NA    NA
+5 31131 5        3  75.2    NA       NA       NA      NA      NA 156.0    NA
+6 31132 6        1  69.5    NA       NA       NA      NA      NA 167.6    NA
+  BMXBMI BMXLEG BMILEG BMXCALF BMICALF BMXARML BMIARML BMXARMC BMIARMC BMXWAIST
+1     NA     NA     NA      NA      NA    16.0      NA    15.5      NA       NA
+2  17.45   37.6     NA    29.3      NA    34.3      NA    21.7      NA     62.8
+3  26.53   42.7     NA    40.6      NA    36.5      NA    32.6      NA     97.8
+4     NA     NA     NA      NA      NA      NA      NA      NA      NA       NA
+5  30.90   38.0     NA    36.6      NA    35.0      NA    35.8      NA     96.0
+6  24.74   40.4     NA    35.6      NA    37.5      NA    31.2      NA     96.5
+  BMIWAIST BMXTHICR BMITHICR BMXTRI BMITRI BMXSUB BMISUB inSample
+1       NA       NA       NA   12.8     NA   10.0     NA        0
+2       NA     39.5       NA   10.4     NA    8.4     NA        1
+3       NA     55.9       NA   18.8     NA   17.6     NA        1
+4       NA       NA       NA     NA     NA     NA     NA        0
+5       NA     53.7       NA     NA      2     NA      1        1
+6       NA     48.0       NA   10.4     NA   22.2     NA        1
+  X  SEQN inSample
+1 1 31127        0
+2 2 31128        1
+3 3 31129        1
+4 4 31130        0
+5 5 31131        1
+6 6 31132        1

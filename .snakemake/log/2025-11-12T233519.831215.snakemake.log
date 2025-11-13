@@ -1,0 +1,50 @@
+Assuming unrestricted shared filesystem usage.
+host: LAPTOP-LF8R5BUU
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+accel_check        1
+accel_fix          1
+all                1
+total              3
+
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Nov 12 23:35:19 2025]
+localrule accel_check:
+    input: logs/bmx_check.log
+    output: logs/accel_check.log
+    jobid: 2
+    reason: Missing output files: logs/accel_check.log
+    resources: tmpdir=/tmp
+[Wed Nov 12 23:37:24 2025]
+Finished jobid: 2 (Rule: accel_check)
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Nov 12 23:37:24 2025]
+localrule accel_fix:
+    input: logs/accel_check.log
+    output: logs/accel_fix.log
+    jobid: 3
+    reason: Missing output files: logs/accel_fix.log; Input files updated by another job: logs/accel_check.log
+    resources: tmpdir=/tmp
+[Wed Nov 12 23:39:28 2025]
+Finished jobid: 3 (Rule: accel_fix)
+2 of 3 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Nov 12 23:39:28 2025]
+localrule all:
+    input: logs/bmx_check.log, logs/accel_check.log, logs/accel_fix.log
+    jobid: 0
+    reason: Input files updated by another job: logs/accel_check.log, logs/accel_fix.log
+    resources: tmpdir=/tmp
+[Wed Nov 12 23:39:28 2025]
+Finished jobid: 0 (Rule: all)
+3 of 3 steps (100%) done
+Complete log(s): /home/xb25901/AHDS/Week_3/formative/.snakemake/log/2025-11-12T233519.831215.snakemake.log
