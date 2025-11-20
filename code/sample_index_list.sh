@@ -16,4 +16,4 @@ DATADIR='data'
 for txt in ${DATADIR}/derived/accel/*.txt; do echo $txt | grep -o '[0-9]\+'; done > ${DATADIR}/derived/accelIndexList.txt
 
 # common index list
-grep -F -x -f  ${DATADIR}/derived/BMI_indexes_in.csv ${DATADIR}/derived/accelIndexList.txt > ${DATADIR}/derived/indexList_in.txt
+#grep -F -x -f  ${DATADIR}/derived/BMI_indexes_in.csv ${DATADIR}/derived/accelIndexList.txt > ${DATADIR}/derived/indexList_in.txt
