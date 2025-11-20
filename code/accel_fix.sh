@@ -2,7 +2,7 @@
 
 ### Accel Data preparation
 # code written to run from the data directory
-DATADIR='../data'
+DATADIR='data'
 
 ## Column missingness fix
 # make a copy of the accel directroy into the derived directory for editing
@@ -13,7 +13,7 @@ sed -i '/NA\tNA\tNA/d' ${DATADIR}/derived/accel/accel-*.txt
 
 # repeat the same column checking command to check the edit worked
 echo "Lines that don't have 8 columns:"
-cat ${DATADIR}/original/accel/accel-*.txt | grep -v '<' | awk -F'\t' '(NF!=8){print $0}' | sort -u
+cat ${DATADIR}/derived/accel/accel-*.txt | grep -v '<' | awk -F'\t' '(NF!=8){print $0}' | sort -u
 
 ## Reformat files by removing first line
 for txt in ${DATADIR}/derived/accel/accel-*.txt; do
