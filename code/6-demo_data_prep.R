@@ -7,7 +7,7 @@ library(haven)
 library(janitor)
 
 # Read in demographic data from SAS file
-demo_data <- read_xpt("../data/original/DEMO_D.XPT")
+demo_data <- read_xpt("data/original/DEMO_D.XPT")
 
 # View(demo_data)
 
@@ -16,7 +16,7 @@ demog <- demo_data |>
   select(SEQN, RIAGENDR, RIDAGEMN, RIDRETH1)
 
 # Read in the body measurement data
-bmx_d <- read_csv("../data/original/BMX_D.csv")
+bmx_d <- read_csv("data/original/BMX_D.csv")
 
 # Clean variable names
 bmx_d_clean <- bmx_d |> 
@@ -32,7 +32,7 @@ bmx_d_demog <- bmx_d_clean |>
   relocate(riagendr, ridagemn, ridreth1, .before = 2)
 
 # Read in the sample file and merge
-sample_info <- read_csv("../data/derived/sample.csv")
+sample_info <- read_csv("data/derived/sample.csv")
 
 sample_info_clean <- sample_info |> 
   janitor::clean_names() |> 
@@ -67,4 +67,4 @@ bdds |>
 
 # Write the new body measurement data to the derived data directory
 bdds |> 
-  write_csv("../data/derived/body_measurements.csv")
+  write_csv("data/derived/body_measurements.csv")

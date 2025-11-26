@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "in script"
 ## BMX data exploration
 #code written to be run from the code directory onto the data directory
 DATADIR='data'
@@ -15,6 +15,7 @@ echo "check number of columns in the first 10 rows"
 awk -F, '{print NF}' ${DATADIR}/original/BMX_D.csv | head
 # check all rows have 28 fields by printing the ones that don't - no output so no further action
 echo "check all rows have 28 fields (expect no output)"
-awk -F, '{print NF}' ${DATADIR}/original/BMX_D.csv | grep -v 28
+awk -F, '{print NF}' ${DATADIR}/original/BMX_D.csv | grep -v "28" | wc -l 
+#awk -F, '{print NF}' ${DATADIR}/original/BMX_D.csv | grep -v 28
 
 

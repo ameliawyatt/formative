@@ -9,25 +9,27 @@ ACC_PID = [int(re.search(r"accel-(\d+).txt", f).group(1)) for f in accel_files]
 # This will mean that if any of the accelerometer data files change or some or added or removed then snakemake won't know to re-run the pipeline
 ACC_PID = [31128, 31129, 31131, 31132, 31133, 31134, 31137]
 
-rule setup:
-    "setup required directories"
-    shell:
-        """
-        mkdir -p logs
-        mkdir -p data/derived
-        mkdir -p data/original
-        mkdir -p results
-        """
+# rule setup:
+#     "setup required directories"
+#     shell:
+#         """
+#         mkdir -p logs
+#         mkdir -p data/derived
+#         mkdir -p data/original
+#         mkdir -p results
+#         """
 
 rule all:
     input:
-        "data/derived/body_measurements.csv",
-        "data/derived/sample.csv",
         "logs/bmx_check.log",
         "logs/accel_check.log",
+        expand("data/derived/accel/accel-{pid}.txt", pid=ACC_PID),
         "logs/accel_fix.log",
+        "data/derived/accelIndexList.txt",
         "logs/sample_index_list.log",
+        "data/derived/sample.csv",
         "logs/5-generate-sample.log",
+        "data/derived/body_measurements.csv",
         "logs/6-demo_data_prep.log"
 
 
@@ -40,10 +42,11 @@ rule check_bm_data:
         "logs/bmx_check.log"
     shell:
         """
+        echo "hello"
         bash code/bmx_check.sh > logs/bmx_check.log
         """
 
-# Check the accelerometer data:
+#Check the accelerometer data:
 rule check_accel_data:
     input:
         "logs/bmx_check.log",

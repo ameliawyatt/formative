@@ -20,5 +20,6 @@ for txt in ${DATADIR}/derived/accel/accel-*.txt; do
   sed -i '1d' $txt
 done
 # check the change happened as expected - should have column names in first row
+echo "check a file to see if column names are in first row:"
 accelSample=`ls ${DATADIR}/derived/accel | head -n1`
 head ${DATADIR}/derived/accel/$accelSample
