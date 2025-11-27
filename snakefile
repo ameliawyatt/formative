@@ -1,6 +1,8 @@
 import glob
 import re
 
+configfile:"config.yml"
+
 # # Get the list of pid values from the filenames in data/original/accel/
 accel_files = glob.glob("data/original/accel/accel-*.txt")
 ACC_PID = [int(re.search(r"accel-(\d+).txt", f).group(1)) for f in accel_files]
@@ -42,7 +44,6 @@ rule check_bm_data:
         "logs/bmx_check.log"
     shell:
         """
-        echo "hello"
         bash code/bmx_check.sh > logs/bmx_check.log
         """
 
