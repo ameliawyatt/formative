@@ -1,0 +1,17 @@
+cpu-bind=MASK - bp1-compute189, task  0  0 [1420735]: mask 0x100000001 set
+Setting up environment
+
+EnvironmentNameNotFound: Could not find conda environment: r-formative
+You can list all discoverable environments with `conda info --envs`.
+
+
+Starting analysis
+Checking body measurements data
+Checking accelerometer data
+Fix accelerometer data
+Making PID list
+Making sample file
+/tmp/slurmd/job14806135/slurm_script: line 41: Rscript: command not found
+Merging demographics data
+/tmp/slurmd/job14806135/slurm_script: line 44: Rscript: command not found
+Analysis complete

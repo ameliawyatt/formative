@@ -1,0 +1,4 @@
+cpu-bind=MASK - bp1-compute189, task  0  0 [1403163]: mask 0x100000001 set
+mkdir: cannot create directory 'slurm_logs/': File exists
+Starting analysis
+Checking body measurements data
