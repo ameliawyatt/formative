@@ -2,3 +2,4 @@ data/*
 !data/README.md
 .snakemake/
 logs/*
+slurm_logs/*

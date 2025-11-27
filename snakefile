@@ -9,15 +9,16 @@ ACC_PID = [int(re.search(r"accel-(\d+).txt", f).group(1)) for f in accel_files]
 # This will mean that if any of the accelerometer data files change or some or added or removed then snakemake won't know to re-run the pipeline
 ACC_PID = [31128, 31129, 31131, 31132, 31133, 31134, 31137]
 
-# rule setup:
-#     "setup required directories"
-#     shell:
-#         """
-#         mkdir -p logs
-#         mkdir -p data/derived
-#         mkdir -p data/original
-#         mkdir -p results
-#         """
+ rule setup:
+     "setup required directories"
+     shell:
+         """
+         mkdir -p slurm_logs
+         #mkdir -p logs
+         #mkdir -p data/derived
+         #mkdir -p data/original
+         #mkdir -p results
+         """
 
 rule all:
     input:
@@ -42,7 +43,6 @@ rule check_bm_data:
         "logs/bmx_check.log"
     shell:
         """
-        echo "hello"
         bash code/bmx_check.sh > logs/bmx_check.log
         """
 
@@ -120,3 +120,18 @@ rule merge_data:
         """
         Rscript code/6-demo_data_prep.R > logs/6-demo_data_prep.log
         """
+
+rule clean:
+	"Clean up"
+	shell:"""
+        if [ -d data/derived ]; then
+        rm -r data/derived/
+        else
+                echo directory derived does not exist
+        fi
+	if [ -d logs ]; then
+	rm -r logs
+	else
+		echo directory logs does not exist
+	fi
+	"""
