@@ -6,6 +6,8 @@ DATADIR='data'
 
 ## Column missingness fix
 # make a copy of the accel directroy into the derived directory for editing
+#### NOTE: this creates the data/derived directory
+mkdir -p ${DATADIR}/derived
 cp -r ${DATADIR}/original/accel ${DATADIR}/derived/
 
 ## Remove all the lines with 3 columns with NA values
