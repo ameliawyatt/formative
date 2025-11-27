@@ -4,9 +4,10 @@ channels:
   - bioconda
   - defaults
 dependencies:
+  - python=3.11
   - r-base
   - r-tidyverse
   - r-haven
   - r-janitor
-  - snakemake
+  - snakemake=7.26
 prefix: /home/xb25901/miniconda3/envs/r-formativeEnv
