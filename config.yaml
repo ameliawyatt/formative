@@ -1,21 +1,23 @@
 cluster-cancel: scancel %j
-cluster:
+cluster: 
   sbatch
     --partition={resources.slurm_partition}
     --account={resources.slurm_account}
     --nodes={resources.nodes}
+    --ntasks-per-node={resources.ntasks_per_node}
+    --cpus-per-task={resources.cpus_per_task}
     --time={resources.time}
     --mem={resources.mem_mb}
-    --ntasks-per-node={resources.ntasks}
+    --output=slurm_logs/%x_%j.out
 default-resources:
   - slurm_partition=teach_cpu
   - slurm_account=sscm037184
   - mem_mb=100
-  - time=20
-  - ntasks=1
+  - time="00:10:00"
+  - ntasks_per_node=1
+  - cpus_per_task=1
   - nodes=1
-jobs: 1
-printshellcmds: True
+jobs: 4
 scheduler: greedy
 use-conda: True
 restart-times: 0
